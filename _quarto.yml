@@ -1,0 +1,53 @@
+project:
+  type: website
+
+website:
+  title: "Martin Roberts"
+  sidebar:
+    style: "floating"
+    search: false
+    collapse-level: 1
+    contents:
+      - text: "Recent Papers"
+        href: recent-papers.qmd
+      - text: "Blogs"
+        href: blogs.qmd
+      - section: "Publications"
+        contents:
+          - text: "Books"
+            href: books.qmd
+          - text: "Articles"
+            href: articles.qmd
+          - text: "Other"
+            href: other-writing.qmd
+      - section: "Conferences"
+        contents:
+          - text: "Invited lectures"
+            href: invited.qmd
+          - text: "Conferences"
+            href: conferences.qmd
+      - section: "Teaching"
+        contents: 
+          - text: "Emerson College"
+            href: emerson.qmd
+      - section: "Information"
+        contents:
+          - text: "About"
+            href: about.qmd
+          - text: "Contact"
+            href: contact.qmd
+          - text: "Newsletter"
+            href: newsletter.qmd
+format:
+  html:
+    #bread-crumbs: false
+    theme: squarespace.scss
+    toc: false
+    grid:
+      sidebar-width: 225px
+      body-width: 1000px
+      margin-width: 225px
+      gutter-width: 2em
+
+
+
