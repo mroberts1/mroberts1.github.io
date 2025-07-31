@@ -11,14 +11,68 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "articles.html",
+    "href": "articles.html",
+    "title": "Articles",
     "section": "",
-    "text": "About this site",
+    "text": "Articles\nContent coming soon.",
+    "crumbs": [
+      "Publications",
+      "Articles"
+    ]
+  },
+  {
+    "objectID": "blogs.html",
+    "href": "blogs.html",
+    "title": "Martin Roberts",
+    "section": "",
+    "text": "Audioreactive\nAlgorithmic Visual Music\nSuperlocrian\nMusic blog",
+    "crumbs": [
+      "Blogs"
+    ]
+  },
+  {
+    "objectID": "newsletter.html",
+    "href": "newsletter.html",
+    "title": "Newsletter",
+    "section": "",
+    "text": "Newsletter\nContent coming soon.",
     "crumbs": [
       "Information",
-      "About"
+      "Newsletter"
+    ]
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Contact\nContent coming soon.",
+    "crumbs": [
+      "Information",
+      "Contact"
+    ]
+  },
+  {
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "Books",
+    "section": "",
+    "text": "Books\nContent coming soon.",
+    "crumbs": [
+      "Publications",
+      "Books"
+    ]
+  },
+  {
+    "objectID": "conferences.html",
+    "href": "conferences.html",
+    "title": "Conferences",
+    "section": "",
+    "text": "Conferences\nContent coming soon.",
+    "crumbs": [
+      "Conferences",
+      "Conferences"
     ]
   },
   {
@@ -32,13 +86,36 @@
     ]
   },
   {
-    "objectID": "blogs.html",
-    "href": "blogs.html",
-    "title": "Martin Roberts",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Audioreactive\nAlgorithmic Visual Music\nSuperlocrian\nMusic blog",
+    "text": "About this site",
     "crumbs": [
-      "Blogs"
+      "Information",
+      "About"
+    ]
+  },
+  {
+    "objectID": "other-writing.html",
+    "href": "other-writing.html",
+    "title": "Other Writing",
+    "section": "",
+    "text": "Other Writing\nContent coming soon.",
+    "crumbs": [
+      "Publications",
+      "Other"
+    ]
+  },
+  {
+    "objectID": "invited.html",
+    "href": "invited.html",
+    "title": "Invited Lectures",
+    "section": "",
+    "text": "Invited Lectures\nContent coming soon.",
+    "crumbs": [
+      "Conferences",
+      "Invited lectures"
     ]
   }
 ]
