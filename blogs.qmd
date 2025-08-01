@@ -7,3 +7,6 @@ Algorithmic Visual Music
 
 [Superlocrian](https://superlocrian.netlify.app)\
 Music blog
+
+[Conditional Perfect](https://conditional-perfect.netlify.app/)\
+Yet another Nick Drake blog

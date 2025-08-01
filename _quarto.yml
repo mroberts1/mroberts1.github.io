@@ -8,11 +8,21 @@ website:
     search: false
     collapse-level: 1
     contents:
+      - text: "<img src='martin-chappie.jpg' style='border-radius: 50%; width: 60px; height: 60px; object-fit: cover; display: block; margin: 0;' alt='Martin Roberts'>"
+      - text: "<br>"
+      - text: "About"
+        href: about.qmd
+      - text: "Contact"
+        href: contact.qmd
       - text: "Recent Papers"
         href: recent-papers.qmd
+      - section: "Course Websites"
+        contents: 
+          - text: "Emerson College"
+            href: emerson.qmd     
       - text: "Blogs"
         href: blogs.qmd
-      - section: "Publications"
+      - section: "Writing"
         contents:
           - text: "Books"
             href: books.qmd
@@ -26,18 +36,6 @@ website:
             href: invited.qmd
           - text: "Conferences"
             href: conferences.qmd
-      - section: "Teaching"
-        contents: 
-          - text: "Emerson College"
-            href: emerson.qmd
-      - section: "Information"
-        contents:
-          - text: "About"
-            href: about.qmd
-          - text: "Contact"
-            href: contact.qmd
-          - text: "Newsletter"
-            href: newsletter.qmd
 format:
   html:
     #bread-crumbs: false
