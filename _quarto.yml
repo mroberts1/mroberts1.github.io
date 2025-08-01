@@ -14,12 +14,10 @@ website:
         href: about.qmd
       - text: "Contact"
         href: contact.qmd
-      - text: "Recent Papers"
-        href: recent-papers.qmd
-      - section: "Course Websites"
-        contents: 
-          - text: "Emerson College"
-            href: emerson.qmd     
+      - text: "Papers"
+        href: papers.qmd
+      - text: "Courses"
+        href: courses.qmd     
       - text: "Blogs"
         href: blogs.qmd
       - section: "Writing"

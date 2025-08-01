@@ -2,6 +2,8 @@
 title: "    "
 ---
 
+## Emerson College
+
 [VM200-2 Media Criticism & Theory](https://mroberts1.github.io/media-criticism-su25)\
 Summer 2025
 
@@ -16,5 +18,7 @@ Fall2024
 
 [VM402-05 Cinematic Media: Reinventing Cinema in the Digital Age](https://mroberts1.github.io/cinematic-media-fa23/)\
 Fall 2023
+
+***
 
 
