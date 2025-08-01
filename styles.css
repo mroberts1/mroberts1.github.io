@@ -1,0 +1,20 @@
+/* css styles */
+
+/* Sidebar title font size */
+.sidebar-title {
+  font-size: 26px !important;
+}
+
+/* Alternative selectors for sidebar title */
+.navbar-brand {
+  font-size: 26px !important;
+}
+
+.sidebar .nav-link.active {
+  font-size: 26px !important;
+}
+
+/* Quarto specific sidebar title */
+.sidebar-header .sidebar-title {
+  font-size: 26px !important;
+}
