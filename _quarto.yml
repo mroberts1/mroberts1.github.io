@@ -38,8 +38,9 @@ website:
             href: conferences.qmd
 format:
   html:
-    #bread-crumbs: false
+    bread-crumbs: false
     theme: squarespace.scss
+    css: styles.css
     toc: false
     grid:
       sidebar-width: 225px
