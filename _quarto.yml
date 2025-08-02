@@ -24,10 +24,12 @@ website:
         contents:
           - text: "Books"
             href: books.qmd
+          - text: "Chapters"
+            href: book-chapters.qmd
           - text: "Articles"
             href: articles.qmd
           - text: "Other"
-            href: other-writing.qmd
+            href: other-articles.qmd
       - section: "Conferences"
         contents:
           - text: "Invited lectures"

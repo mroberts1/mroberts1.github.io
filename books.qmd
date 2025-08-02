@@ -1,7 +1,9 @@
 ---
-title: "Books"
+title: "    "
 ---
 
-# Books
+## Books
 
-Content coming soon.
+[Cornelius’s ‘Fantasma.’](https://www.bloomsbury.com/us/corneliuss-fantasma-9781501330179/) New York: Bloomsbury Academic, 2019. 33 1/3 series.
+
+[*Michel Tournier:* Bricolage *and Cultural Mythology*](https://mroberts.emerson.build/tournier/)*.* Stanford: Stanford French & Italian Studies, 1995.
