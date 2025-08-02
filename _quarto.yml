@@ -21,6 +21,8 @@ website:
             href: entangled-lives.qmd
           - text: "Three-Dimensional Music"
             href: 3d-music.qmd
+          - text: "Videogame Subcultures"
+            href: jaspm-2012.qmd
           - text: "Moving Targets"
             href: moving-targets.qmd
           - text: "Dangerous Liaisons"
@@ -53,6 +55,8 @@ website:
             href: invited.qmd
           - text: "Conferences"
             href: conferences.qmd
+      - text: "Events"
+        href: events.qmd
       - text: "Bio"
         href: bio.qmd
       - text: "Contact"

@@ -2,8 +2,6 @@
 title: "    "
 ---
 
-## Blogs
-
 ::: {layout="[[60, 40]]"}
 
 [![](img/audioreactive.png){width=100%}](https://mroberts1.github.io/audioreactive)
@@ -21,6 +19,28 @@ algorithmic visual music
 
 [Superlocrian](https://superlocrian.netlify.app)\
 music blog
+
+:::
+
+***
+
+::: {layout="[[60, 40]]"}
+
+[![](img/dorian-flat2.png)](https://dokoissho.sdf.org/projects/soundtracks/)
+
+[Dorian ♭2](https://dokoissho.sdf.org/projects/soundtracks/)\
+alternate soundtracks
+
+:::
+
+***
+
+::: {layout="[[60, 40]]"}
+
+[![](img/terminal-beach.png)](https://storage.5apps.com/dokoissho/public/wikiavec/index.html)
+
+[Terminal Beach](https://storage.5apps.com/dokoissho/public/wikiavec/index.html)\
+minimalist hyperdraft blog
 
 :::
 
