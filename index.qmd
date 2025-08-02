@@ -3,6 +3,7 @@ title: "    "
 ---
 
 [![](img/twilighting8.png){width=100%}](twilighting.qmd)\
+<div style="text-align: right;"><small>Image credit: Still from *Megane* (Naoko Ogigami, 2007)</small></div>
 
 [Twilighting: Naoko Ogigami and the Art of Doing Nothing](twilighting.qmd)\
 Paper proposal, in progress.
