@@ -2,7 +2,8 @@
 title: "    "
 ---
 
-## Emerson College
+**Emerson College**\
+Department of Visual & Meda Arts
 
 [VM200-2 Media Criticism & Theory](https://mroberts1.github.io/media-criticism-su25)\
 Summer 2025
@@ -19,7 +20,11 @@ Fall2024
 [VM402-05 Cinematic Media: Reinventing Cinema in the Digital Age](https://mroberts1.github.io/cinematic-media-fa23/)\
 Fall 2023
 
-## Fitchburg State University
+***
+
+***Fitchburg State University***\
+MS in Applied Communication: Socal Media Concentration\
+Communications Media Department
 
 [COMM 7018 Social Media Theory](https://mroberts1.github.io/fsu-smt-su25/)\
 Summer 2025
@@ -45,7 +50,10 @@ Summer 2022
 [COMM 8114 Social Media Marketing](https://mroberts1.github.io/social-media-marketing-summer-2022/)\
 Summer 2022
 
-## Keene State College
+***
+
+**Keene State College**\
+Department of Film
 
 [IHFILM-110-01 Robot Stories](https://mroberts1.github.io/robot-stories-sp24/)\
 Spring 2024

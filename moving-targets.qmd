@@ -1,0 +1,10 @@
+---
+title: "    "
+---
+
+[![](img/moving-targets.png){width=100%}](https://mroberts1.github.io/moving-targets/)\
+
+[Moving Targets: Object Detection and Algorithmic Aesthetics](https://mroberts1.github.io/moving-targets/)\
+Society for Cinema & Media Studies Conference, Denver, 12 April 2023.
+
+***

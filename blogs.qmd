@@ -2,11 +2,50 @@
 title: "    "
 ---
 
+## Blogs
+
+::: {layout="[[60, 40]]"}
+
+[![](img/audioreactive.png){width=100%}](https://mroberts1.github.io/audioreactive)
+
 [Audioreactive](https://mroberts1.github.io/audioreactive)\
-Algorithmic Visual Music
+algorithmic visual music
+
+:::
+
+***
+
+::: {layout="[[60, 40]]"}
+
+[![](img/superlocrian){width=100%}](https://superlocrian.netlify.app)
 
 [Superlocrian](https://superlocrian.netlify.app)\
-Music blog
+music blog
+
+:::
+
+***
+
+::: {layout="[[60, 40]]"}
+
+[![](img/imagine.jpg){width=100%}](https://9dream.netlify.app)
+
+[#9 Dream](https://9dream.netlify.app)\
+transnational soundscapes\
+song networks\
+audiotopias
+
+:::
+
+***
+
+::: {layout="[[60, 40]]"}
+
+[![](img/conditional-perfect){width=100%}](https://conditional-perfect.netlify.app/)
 
 [Conditional Perfect](https://conditional-perfect.netlify.app/)\
-Yet another Nick Drake blog
+yet another Nick Drake blog
+
+:::
+
+***

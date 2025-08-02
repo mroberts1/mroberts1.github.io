@@ -10,10 +10,23 @@ website:
     contents:
       - text: "<img src='martin-chappie.jpg' style='border-radius: 50%; width: 60px; height: 60px; object-fit: cover; display: block; margin: 0;' alt='Martin Roberts'>"
       - text: "<br>"
-      - text: "About"
-        href: about.qmd
-      - text: "Contact"
-        href: contact.qmd
+
+      - section: "Projects"
+        contents:
+          - text: "Twilighting"
+            href: twilighting.qmd
+          - text: "Endless Summer"
+            href: endless-summer.qmd
+          - text: "Entangled Lives"
+            href: entangled-lives.qmd
+          - text: "Three-Dimensional Music"
+            href: 3d-music.qmd
+          - text: "Moving Targets"
+            href: moving-targets.qmd
+          - text: "Dangerous Liaisons"
+            href: dangerous-liaisons.qmd
+          - text: "Double Happiness"
+            href: double-happiness.qmd
       - text: "Papers"
         href: papers.qmd
       - text: "Courses"
@@ -36,6 +49,10 @@ website:
             href: invited.qmd
           - text: "Conferences"
             href: conferences.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Contact"
+        href: contact.qmd
 format:
   html:
     bread-crumbs: false
@@ -44,7 +61,7 @@ format:
     toc: false
     grid:
       sidebar-width: 225px
-      body-width: 1000px
+      body-width: 1200px
       margin-width: 225px
       gutter-width: 2em
 execute:

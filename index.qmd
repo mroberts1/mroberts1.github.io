@@ -2,24 +2,9 @@
 title: "    "
 ---
 
-## Recent Projects
+[![](img/twilighting8.png){width=100%}](twilighting.qmd)\
 
-[Endless Summer: Transcultural Geographies of City Pop Art](https://mroberts1.github.io/endless-summer/)\
-"And Suddenly There Was City Pop: The Global Dimensions of the Retrograde Formation of a Japanese Popular Music Genre"\
-University of Amsterdam, 19-21 March 2025.
+[Twilighting: Naoko Ogigami and the Art of Doing Nothing](twilighting.qmd)\
+Paper proposal, in progress.
 
-[Entangled Lives: Uncanny Animals in Cosmopolitical Documentary](https://mroberts1.github.io/entangled-lives/)\
-“New Configurations of Globality in Documentary Media” panel\
-Society for Cinema & Media Studies Conference, Boston, 16 March 2024.
-
-[Moving Targets: Object Detection and Algorithmic Aesthetics](https://mroberts1.github.io/moving-targets/)\
-Society for Cinema & Media Studies Conference, Denver, 12 April 2023.
-
-[Dangerous Liaisons: Nocturnal Cinema and the French New Wave](https://mroberts1.github.io/nocturnal-cinema/)\
-Originally presented as “Nocturnal Cinema: Film Noir, Jazz, and the French New Wave” at the [Media & The Night](https://theurbannight.files.wordpress.com/2022/03/book-of-abstracts.pdf) conference\
-McGill University, 18-19 March 2022.\
-Updated 20 July 2024.
-
-[Three-Dimensional Music: Cornelius's Animated Soundworlds](https://3d-music.netlify.app/)\
-Japanese Association for the Study of Popular Music (JASPM) conference, Osaka, 7 December 2019.\
-Revised and expanded July 2024.
+***
