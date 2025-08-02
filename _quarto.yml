@@ -27,6 +27,10 @@ website:
             href: dangerous-liaisons.qmd
           - text: "Double Happiness"
             href: double-happiness.qmd
+          - text: "Torrential Noise"
+            href: torrential-noise.qmd
+          - text: "Imagine"
+            href: imagine.qmd
       - text: "Papers"
         href: papers.qmd
       - text: "Courses"
@@ -49,8 +53,8 @@ website:
             href: invited.qmd
           - text: "Conferences"
             href: conferences.qmd
-      - text: "About"
-        href: about.qmd
+      - text: "Bio"
+        href: bio.qmd
       - text: "Contact"
         href: contact.qmd
 format:

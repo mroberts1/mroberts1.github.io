@@ -2,8 +2,6 @@
 title: "    "
 ---
 
-## Books
-
 ::: {layout="[[20, 40, 40]]"}
 
 [![](img/fantasma.jpg){width=200px}](https://www.bloomsbury.com/us/corneliuss-fantasma-9781501330179/)\
@@ -13,6 +11,10 @@ New York: Bloomsbury Academic, 2019. 33 1/3 series.
 
 :::
 
+In Tokyo in the early 1990s, an indie band called Flipper's Guitar was at the forefront of a new wave in Japanese popular music known as Shibuya-kei. The band's founder, Keigo Oyamada, would go on to produce, under the name Cornelius, a series of albums that are among the most innovative in Japanese popular music of the past two decades. Oyamada's third album under his Cornelius alter-ego, Fantasma (1997), played a key role in putting J-pop on the world map for Western music fans, and Oyamada himself is today one of the most respected figures in the Japanese music industry. This book tells the story of Fantasma's emergence from the Shibuya-kei scene and considers the wider impact of Oyamada's work both internationally and on Japanese popular music today.
+
+***
+
 ::: {layout="[[20, 40, 40]]"}
 
 ![](img/tournier.jpg){width=200px}\
@@ -21,3 +23,11 @@ New York: Bloomsbury Academic, 2019. 33 1/3 series.
 Stanford: Stanford French & Italian Studies, 1995.
 
 :::
+
+Since the publication of his first novel in 1967, Michel Tournier has emerged as one of the leading French novelists of his generation. While his works have been extensively discussed in the academic world, they have also enjoyed considerable popular success. Over the past decade, Tournier has also been gaining increasing recognition in the English-speaking world, and his fiction has been translated into over twenty languages.
+
+Both in theory and practice, Tournier’s writing lends central importance to the subject of myth. For Tournier, a myth is a narrative which communicates abstract metaphysical truths in the concrete form of a children’s story, and can accordingly be read either symbolically or literally, by adults and children alike. Following the example of literary precursors such as Kipling’s Just-So stories or Saint-Exupéry’s Le Petit Prince, Tournier’s fiction pursues the same goal. Myth itself provides the subject-matter for this fiction, and all of Tournier’s novels and stories are based in varying degrees on familiar subjects drawn from the archive of Western cultural mythology.
+
+This study offers a new perspective on the subject of myth in Tournier’s fiction. Drawing on the work of the French ethnographer and theorist of myth Claude Lévi-Strauss, under whom Tournier studied during the 1950s, it argues that Tournier’s fiction evidences a mythical mode of thought similar to that described by Lévi-Strauss. Tournier’s fiction, it shows, is constructed by a process of bricolage of ready-made narratives, characters, and images drawn from Western cultural mythology. Through its symbolic manipulation of these materials, it articulates abstract problems and contradictions, and attempts to construct imaginary – albeit illusory – solutions to them. Tournier’s bricolage in his later fiction has become increasingly self-reflexive, as his accumulating previous projects have themselves come to constitute an autonomous mythological world. In this cycle of telling and re-telling, theme and variations, repetition and difference, Tournier’s poetics today thus enacts the process by which myths themselves are generated.
+
+***
