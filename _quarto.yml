@@ -45,6 +45,8 @@ format:
       body-width: 1000px
       margin-width: 225px
       gutter-width: 2em
-
+execute:
+  freeze: true
+editor: source
 
 
