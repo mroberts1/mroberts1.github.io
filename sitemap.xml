@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://mroberts1.github.io/invited.html</loc>
-    <lastmod>2025-07-31T23:35:39.721Z</lastmod>
+    <loc>https://mroberts1.github.io/book-chapters.html</loc>
+    <lastmod>2025-08-02T03:28:52.850Z</lastmod>
   </url>
   <url>
-    <loc>https://mroberts1.github.io/other-writing.html</loc>
-    <lastmod>2025-07-31T23:35:35.345Z</lastmod>
+    <loc>https://mroberts1.github.io/articles.html</loc>
+    <lastmod>2025-08-02T03:29:56.749Z</lastmod>
   </url>
   <url>
     <loc>https://mroberts1.github.io/about.html</loc>
@@ -14,23 +14,27 @@
   </url>
   <url>
     <loc>https://mroberts1.github.io/conferences.html</loc>
-    <lastmod>2025-07-31T23:35:43.728Z</lastmod>
+    <lastmod>2025-08-02T03:36:36.797Z</lastmod>
   </url>
   <url>
-    <loc>https://mroberts1.github.io/contact.html</loc>
-    <lastmod>2025-08-01T01:52:20.108Z</lastmod>
-  </url>
-  <url>
-    <loc>https://mroberts1.github.io/books.html</loc>
-    <lastmod>2025-07-31T23:35:25.047Z</lastmod>
+    <loc>https://mroberts1.github.io/papers.html</loc>
+    <lastmod>2025-08-02T03:46:07.360Z</lastmod>
   </url>
   <url>
     <loc>https://mroberts1.github.io/courses.html</loc>
     <lastmod>2025-08-02T03:22:38.745Z</lastmod>
   </url>
   <url>
-    <loc>https://mroberts1.github.io/papers.html</loc>
-    <lastmod>2025-08-01T02:07:44.366Z</lastmod>
+    <loc>https://mroberts1.github.io/books.html</loc>
+    <lastmod>2025-08-02T03:33:54.422Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mroberts1.github.io/contact.html</loc>
+    <lastmod>2025-08-01T01:52:20.108Z</lastmod>
+  </url>
+  <url>
+    <loc>https://mroberts1.github.io/other-articles.html</loc>
+    <lastmod>2025-08-02T03:32:20.587Z</lastmod>
   </url>
   <url>
     <loc>https://mroberts1.github.io/index.html</loc>
@@ -41,7 +45,7 @@
     <lastmod>2025-07-31T23:56:41.505Z</lastmod>
   </url>
   <url>
-    <loc>https://mroberts1.github.io/articles.html</loc>
-    <lastmod>2025-07-31T23:35:31.137Z</lastmod>
+    <loc>https://mroberts1.github.io/invited.html</loc>
+    <lastmod>2025-08-02T03:35:54.670Z</lastmod>
   </url>
 </urlset>
