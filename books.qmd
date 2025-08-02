@@ -4,6 +4,20 @@ title: "    "
 
 ## Books
 
-[Cornelius’s ‘Fantasma.’](https://www.bloomsbury.com/us/corneliuss-fantasma-9781501330179/) New York: Bloomsbury Academic, 2019. 33 1/3 series.
+::: {layout="[[20, 40, 40]]"}
 
-[*Michel Tournier:* Bricolage *and Cultural Mythology*](https://mroberts.emerson.build/tournier/)*.* Stanford: Stanford French & Italian Studies, 1995.
+[![](img/fantasma.jpg){width=200px}](https://www.bloomsbury.com/us/corneliuss-fantasma-9781501330179/)\
+
+[Cornelius’s ‘Fantasma.’](https://www.bloomsbury.com/us/corneliuss-fantasma-9781501330179/)\
+New York: Bloomsbury Academic, 2019. 33 1/3 series.
+
+:::
+
+::: {layout="[[20, 40, 40]]"}
+
+![](img/tournier.jpg){width=200px}\
+
+[*Michel Tournier:* Bricolage *and Cultural Mythology*](https://mroberts.emerson.build/tournier/)*.\
+Stanford: Stanford French & Italian Studies, 1995.
+
+:::
