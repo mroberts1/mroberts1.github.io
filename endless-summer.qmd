@@ -3,7 +3,7 @@ title: "    "
 ---
 
 <div>
-<video autoplay loop muted playsinline controls="false" width="80%">
+<video autoplay loop muted playsinline controls="false" width="75%">
 <source src="video/taxiway.mp4" type="video/mp4">
 </video>
 </div>

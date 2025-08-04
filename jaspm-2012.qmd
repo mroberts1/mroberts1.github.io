@@ -2,7 +2,14 @@
 title: "    "
 ---
 
-{{< video https://vimeo.com/1000991173 >}}
+<!-- {{< video https://vimeo.com/1000991173 width="640" height="320" autoplay=1 >}} -->
+
+<div>
+<video autoplay loop muted playsinline controls="true" width="75%">
+<source src="https://vimeo.com/1000991173" type="video/mp4">
+</video>
+</div>
+<br>
 
 [‘By Pressing Down This Special Key, It Plays A Little Melody’: Videogame Subcultures and Nostalgia for the Future.](https://mroberts1.github.io/jaspm-2012/)\
 
