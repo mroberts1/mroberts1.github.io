@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-input82aea2c8065adde8 – Martin Roberts</title>
+<title>quarto-inputb037aa265b8f995d – Martin Roberts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap-08d32aa378baae6c689768c21988777c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -108,13 +111,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Projects</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./twilighting.html" class="sidebar-item-text sidebar-link">
@@ -155,6 +158,12 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./dangerous-liaisons.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Dangerous Liaisons</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./tropical-dandies.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Tropical Dandies</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -261,7 +270,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bio.html" class="sidebar-item-text sidebar-link active">
+  <a href="./bio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bio</span></a>
   </div>
 </li>
@@ -283,10 +292,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="mailto:martin_roberts@emerson.edu">Martin Roberts</a> teaches courses on world cinema, digital culture, and cinematic media in the Department of Visual &amp; Media Arts at Emerson College, Boston. He completed a doctoral dissertation on the contemporary French novelist Michel Tournier at the University of Cambridge, published as <strong>Michel Tournier: Bricolage and Cultural Mythology</strong> by Stanford French &amp; Italian Studies.</p>
-<p>His postdoctoral research focused on ethnographic surrealism, but since participating in the launch of the Film &amp; Media Studies program at MIT, his research has focused on global media and culture. His publications on film and media include essays on global documentary, IMAX movies, and the Danish Dogma ’95 movement in journals such as <em>Cinema Journal</em> and <em>Visual Anthopology</em>.</p>
+<p><a href="img/mcml.jpg" class="lightbox" data-glightbox="description: .lightbox-desc-1;" data-gallery="quarto-lightbox-gallery-1"><img src="img/mcml.jpg" class="img-fluid" style="width:80.0%"></a></p>
+<p><a href="https://mroberts1.github.io/tropical-dandies/">Tropical Dandies: ‘Merry Christmas, Mr.&nbsp;Lawrence’, Exoticism, and Popular Music</a></p>
+<p>Society for Cinema and Media Studies (SCMS) conference, Seattle, 13-17 March 2019.</p>
 
 
+<div class="hidden" aria-hidden="true">
+<div class="glightbox-desc lightbox-desc-1">
+<blockquote class="blockquote">
+<p>David Bowie and Ryūichi Sakamoto on the set of <strong>Merry Christmas, Mr.&nbsp;Lawrence</strong></p>
+</blockquote>
+</div>
+</div>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -361,7 +378,7 @@ ul.task-list li input[type="checkbox"] {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/mroberts1\.github\.io\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
@@ -702,6 +719,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

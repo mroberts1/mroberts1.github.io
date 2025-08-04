@@ -30,6 +30,8 @@ website:
             href: moving-targets.qmd
           - text: "Dangerous Liaisons"
             href: dangerous-liaisons.qmd
+          - text: "Tropical Dandies"
+            href: tropical-dandies.qmd
           - text: "Double Happiness"
             href: double-happiness.qmd
           - text: "Torrential Noise"
