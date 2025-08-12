@@ -9,6 +9,7 @@ website:
     style: "floating"
     search: false
     collapse-level: 1
+    pinned: true
     contents:
       - text: "<img src='martin-chappie.jpg' style='border-radius: 50%; width: 60px; height: 60px; object-fit: cover; display: block; margin: 0;' alt='Martin Roberts'>"
       - text: "<br>"
@@ -73,7 +74,7 @@ format:
     grid:
       sidebar-width: 250px
       body-width: 1200px
-      #margin-width: 250px
+      margin-width: 250px
       gutter-width: 2em
 execute:
   freeze: true
