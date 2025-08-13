@@ -71,6 +71,8 @@ format:
     theme: squarespace.scss
     css: styles.css
     toc: false
+    resources:
+      - "fonts/**"
     grid:
       sidebar-width: 250px
       body-width: 1200px

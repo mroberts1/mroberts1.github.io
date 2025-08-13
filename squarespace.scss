@@ -1,12 +1,21 @@
 /*-- scss:defaults --*/
 
+
 // Import Adobe Fonts (Proxima Nova)
 @import url("https://use.typekit.net/fme8kty.css");
 @import url("https://use.typekit.net/ejl5bmc.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+	font-family: 'TStarProBold';
+	src: url('fonts/TStarPro/TStarProBold.ttf') format('truetype');
+	font-weight: 900; /* Use heavier weight */
+	font-style: normal;
+	font-display: swap; /* Improve loading performance */
+}
 
 // Font variables - work with Quarto's defaults
-$font-family-sans-serif: "neue-haas-unica", "proxima-nova", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !default;
+$font-family-sans-serif: 'Roboto', "neue-haas-unica", "proxima-nova", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !default;
 $font-size-base: 16px !default;
 $font-size-h1: 28px !default;
 $line-height-base: 1.6 !default;
@@ -27,6 +36,9 @@ $h4-font-size: 14px !default;
 $h5-font-size: 14px !default;
 $h6-font-size: 14px !default;
 
+// Bootstrap body font weight override for Roboto Light
+$body-font-weight: 300 !default;
+
 // Quarto grid system overrides
 $grid-sidebar-width: 300px !default;
 $grid-body-width: 1000px !default;
@@ -35,6 +47,11 @@ $grid-gutter-width: 1em !default;
 
 /*-- scss:rules --*/
 
+// Override Bootstrap CSS variables first
+:root {
+  --bs-body-font-weight: 300; // Set Roboto Light weight
+}
+
 // Global styles
 body {
   font-family: $font-family-sans-serif;
@@ -42,26 +59,32 @@ body {
   line-height: $line-height-base;
   color: $body-color;
   background-color: #ffffff;
-  font-weight: 400; // Normal body text weight
+  font-weight: 300; // Roboto Light weight
 }
 
-// Typography
+// Typography - All headings use TStarProBold and uppercase
 h1, .h1 {
+  font-family: 'TStarProBold', sans-serif;
   font-size: $font-size-h1; // 28px
-  font-weight: 400;
+  font-weight: 900;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 // All other headers should be 14px and bold
 h2, h3, h4, h5, h6,
 .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'TStarProBold', sans-serif;
   font-size: 14px; // 14px
-  font-weight: 700; // bold
+  font-weight: 900;
   line-height: 1.3;
   margin-bottom: 0.8rem;
   color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 // Links
@@ -91,19 +114,21 @@ a {
   display: none;
 }
 
-// Sidebar title styling - make Martin Roberts bold
+// Sidebar title styling - make Martin Roberts bold with TStarPro font
 #quarto-sidebar .sidebar-title {
-  font-family: $font-family-sans-serif;
+  font-family: 'TStarProBold', sans-serif;
   font-size: $font-size-h1;
-  font-weight: 700;
+  font-weight: 900;
   color: #000000;
   margin: 0.25em 0 2rem 0;
   padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
   
   a {
     color: #000000;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 900;
     
     &:hover {
       color: #000000;
