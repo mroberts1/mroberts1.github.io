@@ -1,5 +1,156 @@
 /* css styles */
 
+/* Sidebar hover highlight effect - inspired by pauricfreeman.com */
+
+/* Main sidebar navigation links */
+.sidebar .sidebar-item-text.sidebar-link {
+  transition: all 0.2s ease;
+  border-radius: 0;
+  padding: 0.25rem 0.8rem;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar .sidebar-item-text.sidebar-link:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Section headers that are also links */
+.sidebar .sidebar-item-text.sidebar-link.collapsed {
+  transition: all 0.2s ease;
+  padding: 0.25rem 0.8rem;
+  margin: 0;
+  border-radius: 0;
+}
+
+.sidebar .sidebar-item-text.sidebar-link.collapsed:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* Ensure all sidebar links get the effect */
+a.sidebar-item-text.sidebar-link {
+  transition: all 0.2s ease;
+  border-radius: 0;
+  padding: 0.25rem 0.8rem;
+  margin: 0;
+}
+
+a.sidebar-item-text.sidebar-link:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Remove extra spacing from sidebar items */
+.sidebar .sidebar-item {
+  margin-bottom: 0;
+}
+
+.sidebar .sidebar-item-container {
+  margin-bottom: 0;
+}
+
+/* Override any existing link styles */
+.sidebar a:hover {
+  text-decoration: none;
+}
+
+/* Custom cursor effect for sidebar links */
+.sidebar .sidebar-link:hover {
+  cursor: pointer;
+}
+
+/* Consistent hover effect for body text links */
+.quarto-layout-cell a {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.1rem 0.2rem;
+  margin: -0.1rem -0.2rem;
+  border-radius: 0;
+}
+
+.quarto-layout-cell a:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Also apply to main content area links */
+main a {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.1rem 0.2rem;
+  margin: -0.1rem -0.2rem;
+  border-radius: 0;
+}
+
+main a:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* General content area links */
+#quarto-content a:not(.sidebar a):not(.navbar a) {
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.1rem 0.2rem;
+  margin: -0.1rem -0.2rem;
+  border-radius: 0;
+}
+
+#quarto-content a:not(.sidebar a):not(.navbar a):hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* Override any theme-specific link colors */
+body a:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+/* But exclude sidebar and navigation links from the general rule */
+.sidebar a:hover,
+.navbar a:hover,
+.quarto-secondary-nav a:hover {
+  /* Let sidebar styles take precedence */
+}
+
+/* Sidebar top-level headings - uppercase and regular weight */
+.sidebar .sidebar-item-text.sidebar-link.collapsed {
+  text-transform: uppercase !important;
+  font-weight: normal !important;
+}
+
+/* Also target section headers that might not have the collapsed class */
+.sidebar .sidebar-item-section .sidebar-item-text {
+  text-transform: uppercase !important;
+  font-weight: normal !important;
+}
+
+/* Target non-collapsible top-level items (like Papers, Courses, etc.) */
+.sidebar > .sidebar-menu-container > ul > li > .sidebar-item-container > .sidebar-item-text.sidebar-link:not(.collapsed) {
+  text-transform: uppercase !important;
+  font-weight: normal !important;
+}
+
+/* Alternative selector for top-level sidebar items */
+.sidebar .sidebar-menu-container > ul > li:not(.sidebar-item-section) > .sidebar-item-container > .sidebar-item-text {
+  text-transform: uppercase !important;
+  font-weight: normal !important;
+}
+
 /* Sidebar title font size */
 .sidebar-title {
   font-size: 26px !important;

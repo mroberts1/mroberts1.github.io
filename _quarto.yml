@@ -13,7 +13,7 @@ website:
     contents:
       - text: "<img src='martin-chappie.jpg' style='border-radius: 50%; width: 60px; height: 60px; object-fit: cover; display: block; margin: 0;' alt='Martin Roberts'>"
       - text: "<br>"
-      - section: "Projects"
+      - section: "Selected Projects"
         contents:
           - text: "Twilighting"
             href: twilighting.qmd
