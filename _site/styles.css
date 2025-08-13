@@ -46,13 +46,32 @@ a.sidebar-item-text.sidebar-link:hover {
   text-decoration: none;
 }
 
-/* Remove extra spacing from sidebar items */
+/* Aggressively remove spacing from sidebar items */
 .sidebar .sidebar-item {
-  margin-bottom: 0;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 .sidebar .sidebar-item-container {
-  margin-bottom: 0;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Remove spacing from sidebar lists */
+.sidebar ul.list-unstyled {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sidebar ul.list-unstyled li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Specifically target top-level sidebar items for tight spacing */
+.sidebar .sidebar-menu-container > ul > li {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Override any existing link styles */
@@ -127,28 +146,60 @@ body a:hover {
   /* Let sidebar styles take precedence */
 }
 
-/* Sidebar top-level headings - uppercase and regular weight */
+/* Sidebar top-level headings - neue-haas-grotesk-display font */
 .sidebar .sidebar-item-text.sidebar-link.collapsed {
-  text-transform: uppercase !important;
+  font-family: neue-haas-grotesk-display, sans-serif !important;
   font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-transform: uppercase !important;
+  word-spacing: 0.2em !important;
 }
 
 /* Also target section headers that might not have the collapsed class */
 .sidebar .sidebar-item-section .sidebar-item-text {
-  text-transform: uppercase !important;
+  font-family: neue-haas-grotesk-display, sans-serif !important;
   font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-transform: uppercase !important;
+  word-spacing: 0.2em !important;
 }
 
 /* Target non-collapsible top-level items (like Papers, Courses, etc.) */
 .sidebar > .sidebar-menu-container > ul > li > .sidebar-item-container > .sidebar-item-text.sidebar-link:not(.collapsed) {
-  text-transform: uppercase !important;
+  font-family: neue-haas-grotesk-display, sans-serif !important;
   font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-transform: uppercase !important;
+  word-spacing: 0.2em !important;
 }
 
 /* Alternative selector for top-level sidebar items */
 .sidebar .sidebar-menu-container > ul > li:not(.sidebar-item-section) > .sidebar-item-container > .sidebar-item-text {
-  text-transform: uppercase !important;
+  font-family: neue-haas-grotesk-display, sans-serif !important;
   font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-transform: uppercase !important;
+  word-spacing: 0.2em !important;
+}
+
+/* Body text h2 headings - neue-haas-grotesk-display font */
+h2 {
+  font-family: neue-haas-grotesk-display, sans-serif !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
+
+/* Also target h2 in main content areas */
+main h2,
+#quarto-content h2,
+.quarto-layout-cell h2 {
+  font-family: neue-haas-grotesk-display, sans-serif !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
 }
 
 /* Sidebar title font size */
