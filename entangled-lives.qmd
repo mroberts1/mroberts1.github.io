@@ -1,16 +1,10 @@
 ---
-title: "    "
+title: "Entangled Lives"
 ---
 
-<div>
-
 <video autoplay loop muted playsinline controls="false" width="75%">
-
 <source src="video/sd-cover.mp4" type="video/mp4">
-
 </video>
-
-</div>
 <br>
 [Entangled Lives: Uncanny Animals in Cosmopolitical Documentary](https://dokoissho.sdf.org/conferences/entangled-lives/)\
 “New Configurations of Globality in Documentary Media” panel\

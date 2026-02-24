@@ -1,5 +1,5 @@
 ---
-title: "    "
+title: "Moving Targets"
 ---
 
 [![](img/moving-targets.png){width=80%}](https://mroberts1.github.io/moving-targets/)\

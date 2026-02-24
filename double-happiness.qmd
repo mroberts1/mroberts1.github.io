@@ -1,5 +1,5 @@
 ---
-title: "    "
+title: "Double Happiness"
 ---
 
 [![](img/roy-choi.jpg){width=100%}](https://9dream.netlify.app/asian-american-food-media/)

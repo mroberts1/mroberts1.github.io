@@ -55,11 +55,6 @@ $grid-gutter-width: 1em !default;
 
 /*-- scss:rules --*/
 
-// Hide title block — titles are set for browser tab/SEO but not rendered visually
-.quarto-title-block {
-  display: none;
-}
-
 :root {
   --bs-body-font-weight: 300;
 }

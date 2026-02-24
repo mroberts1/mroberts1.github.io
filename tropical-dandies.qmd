@@ -1,5 +1,5 @@
 ---
-title: "    "
+title: "Tropical Dandies"
 ---
 
 ![](img/mcml.jpg){.lightbox width="80%" description=">David Bowie and Ryūichi Sakamoto on the set of **Merry Christmas, Mr. Lawrence**"}
