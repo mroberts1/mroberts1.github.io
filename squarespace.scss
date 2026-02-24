@@ -4,20 +4,29 @@
 // Import Adobe Fonts (Proxima Nova)
 @import url("https://use.typekit.net/fme8kty.css");
 @import url("https://use.typekit.net/ejl5bmc.css");
-@import url("https://use.typekit.net/ejl5bmc.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @font-face {
 	font-family: 'TStarProBold';
 	src: url('fonts/TStarPro/TStarProBold.ttf') format('truetype');
-	font-weight: 900; /* Use heavier weight */
+	font-weight: 900;
 	font-style: normal;
-	font-display: swap; /* Improve loading performance */
+	font-display: swap;
 }
 
-// Font variables - work with Quarto's defaults
-$font-family-sans-serif: 'Roboto', "neue-haas-unica", "proxima-nova", "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif !default;
-$font-size-base: 16px !default;
+@font-face {
+  font-family: "agipo";
+  src:
+    url("fonts/agipo.woff2") format("woff2"),
+    url("fonts/agipo.woff") format("woff"),
+    url("fonts/agipo.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+$font-family-sans-serif: "agipo", "Roboto", "proxima-nova", "Helvetica Neue", "Joss", "Source Sans", "Inter", "IBM Plex Sans", "Public Sans", "Noto Sans", "Atkinson Hyperlegible", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-base: 18px !default;
 $font-size-h1: 28px !default;
 $line-height-base: 1.6 !default;
 
@@ -29,7 +38,7 @@ $link-active-color: #cccccc !default;
 $link-visited-color: #000000 !default;
 $sidebar-bg: #ffffff !default;
 
-// Bootstrap heading size overrides - h1=28px, all others=14px
+// Bootstrap heading size overrides
 $h1-font-size: 28px !default;
 $h2-font-size: 14px !default;
 $h3-font-size: 14px !default;
@@ -37,7 +46,6 @@ $h4-font-size: 14px !default;
 $h5-font-size: 14px !default;
 $h6-font-size: 14px !default;
 
-// Bootstrap body font weight override for Roboto Light
 $body-font-weight: 300 !default;
 
 // Quarto grid system overrides
@@ -48,25 +56,33 @@ $grid-gutter-width: 1em !default;
 
 /*-- scss:rules --*/
 
-// Override Bootstrap CSS variables first
 :root {
-  --bs-body-font-weight: 300; // Set Roboto Light weight
+  --bs-body-font-weight: 300;
 }
 
-// Global styles
+// ===== GLOBAL =====
+
 body {
   font-family: $font-family-sans-serif;
   font-size: $font-size-base;
   line-height: $line-height-base;
   color: $body-color;
   background-color: #ffffff;
-  font-weight: 300; // Roboto Light weight
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0.1in;
 }
 
-// Typography - All headings use TStarProBold and uppercase
+.page {
+  margin: 0;
+  padding: 0;
+}
+
+// ===== TYPOGRAPHY =====
+
 h1, .h1 {
   font-family: 'TStarProBold', sans-serif;
-  font-size: $font-size-h1; // 28px
+  font-size: $font-size-h1;
   font-weight: 900;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -75,11 +91,23 @@ h1, .h1 {
   letter-spacing: 0.03em;
 }
 
-// All other headers should be 14px and bold
-h2, h3, h4, h5, h6,
-.h2, .h3, .h4, .h5, .h6 {
+// h2 uses neue-haas-grotesk-display
+h2, .h2,
+main h2,
+#quarto-content h2,
+.quarto-layout-cell h2 {
+  font-family: neue-haas-grotesk-display, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  line-height: 1.3;
+  margin-bottom: 0.8rem;
+  color: #000000;
+}
+
+h3, h4, h5, h6,
+.h3, .h4, .h5, .h6 {
   font-family: 'TStarProBold', sans-serif;
-  font-size: 14px; // 14px
+  font-size: 14px;
   font-weight: 900;
   line-height: 1.3;
   margin-bottom: 0.8rem;
@@ -88,149 +116,6 @@ h2, h3, h4, h5, h6,
   letter-spacing: 0.02em;
 }
 
-// Links
-a {
-  color: $link-color;
-  text-decoration: none;
-  font-weight: 700; // Make all links bold
-  transition: color 0.2s ease;
-  
-  &:hover {
-    color: $link-hover-color; // Red on hover
-    text-decoration: none;
-  }
-  
-  &:visited {
-    color: $link-visited-color; // Black for visited links
-    font-weight: 700; // Bold for visited links
-  }
-  
-  &:active, &.active {
-    color: $link-active-color; // Light grey for active links
-  }
-}
-
-// Hide Quarto's top header for clean look
-#quarto-header {
-  display: none;
-}
-
-// Sidebar title styling - make Martin Roberts bold with TStarPro font
-#quarto-sidebar .sidebar-title {
-  font-family: 'TStarProBold', sans-serif;
-  font-size: $font-size-h1;
-  font-weight: 900;
-  color: #000000;
-  margin: 0.25em 0 2rem 0;
-  padding: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  
-  a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 900;
-    
-    &:hover {
-      color: #000000;
-    }
-  }
-}
-
-// Sidebar navigation styling
-#quarto-sidebar {
-  // Hide search functionality for cleaner look
-  .sidebar-search {
-    display: none;
-  }
-  
-  // Section headers
-  .sidebar-item-section .sidebar-item-text {
-    font-family: $font-family-sans-serif;
-    font-size: $font-size-base;
-    font-weight: 500; // Medium
-    color: #000000; // Black
-    cursor: pointer;
-    
-    &:hover {
-      color: $link-hover-color;
-    }
-  }
-  
-  // Hide toggle chevrons
-  .sidebar-item-toggle {
-    display: none;
-  }
-  
-  // Subsection links
-  .collapse .sidebar-item .sidebar-item-text {
-    color: $link-color; // Black
-    font-size: $font-size-base;
-    font-weight: 500; // Medium
-    
-    &:hover {
-      color: $link-hover-color; // Red on hover
-    }
-    
-    &:active, &.active {
-      color: $link-active-color; // Light grey for active
-    }
-    
-    &:visited {
-      color: $link-visited-color; // Black for visited links
-      font-weight: 500; // Medium for visited links
-    }
-  }
-  
-  // Direct navigation items
-  .sidebar-item:not(.sidebar-item-section) .sidebar-item-text {
-    color: #000000;
-    font-size: $font-size-base;
-    font-weight: 500; // Medium
-    
-    &:hover {
-      color: $link-hover-color; // Red on hover
-    }
-    
-    &:active, &.active {
-      color: $link-active-color; // Light grey for active
-    }
-  }
-  
-  // Remove Bootstrap spacing that causes indentation
-  .ms-1, .ms-2, .ms-3, .ms-4, .ms-5 {
-    margin-left: 0 !important;
-  }
-  
-  .ps-1, .ps-2, .ps-3, .ps-4, .ps-5 {
-    padding-left: 0 !important;
-  }
-  
-  .menu-text {
-    margin-left: 0 !important;
-    padding-left: 0 !important;
-  }
-}
-
-// Override Quarto's default page container to add 100px margins
-body {
-  margin: 0;
-  padding: 0 0.1in; // 0.1in left and right padding
-}
-
-// Ensure the entire page grid is within the 100px margins
-.page {
-  margin: 0;
-  padding: 0;
-}
-
-// Let Quarto's grid system handle sidebar and content positioning
-// but ensure they respect the body padding
-
-// Check natural alignment between sidebar title and main content
-// (margin-top removed to see baseline positioning)
-
-// Utility classes for richardmisek.com style
 .subtitle {
   font-size: 1rem;
   color: $link-color;
@@ -242,4 +127,203 @@ body {
   font-size: 0.9rem;
   color: $link-color;
   margin: 1rem 0;
+}
+
+// ===== LINKS =====
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+
+  &:visited {
+    color: $link-visited-color;
+    font-weight: 700;
+  }
+
+  &:active, &.active {
+    color: $link-active-color;
+  }
+}
+
+// Black-background hover for all links
+body a:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+// Main content links get a subtle padding for the highlight box
+main a,
+.quarto-layout-cell a,
+#quarto-content a:not(.sidebar a):not(.navbar a) {
+  color: inherit;
+  padding: 0.1rem 0.2rem;
+  margin: -0.1rem -0.2rem;
+  border-radius: 0;
+}
+
+// ===== HEADER =====
+
+// Hide top header on desktop — sidebar handles navigation there
+// On mobile (< 992px), it shows the hamburger button
+@media (min-width: 992px) {
+  #quarto-header {
+    display: none;
+  }
+}
+
+// ===== SIDEBAR =====
+
+// Sidebar title
+#quarto-sidebar .sidebar-title,
+.sidebar-header .sidebar-title,
+.sidebar-title,
+.navbar-brand {
+  font-family: 'TStarProBold', sans-serif;
+  font-size: 26px !important;
+  font-weight: 900;
+  color: #000000;
+  margin: 0.25em 0 2rem 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+
+  a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 900;
+
+    &:hover {
+      color: #000000;
+      background-color: transparent !important;
+    }
+  }
+}
+
+#quarto-sidebar {
+  .sidebar-search {
+    display: none;
+  }
+
+  .sidebar-item-toggle {
+    display: none;
+  }
+
+  // Remove Bootstrap spacing that causes indentation
+  .ms-1, .ms-2, .ms-3, .ms-4, .ms-5 {
+    margin-left: 0 !important;
+  }
+
+  .ps-1, .ps-2, .ps-3, .ps-4, .ps-5 {
+    padding-left: 0 !important;
+  }
+
+  .menu-text {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+  }
+}
+
+// Tight spacing on all sidebar items
+.sidebar .sidebar-item,
+.sidebar .sidebar-item-container {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.sidebar ul.list-unstyled,
+.sidebar ul.list-unstyled li,
+.sidebar .sidebar-menu-container > ul > li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+// Sidebar section headers use neue-haas-grotesk-display
+.sidebar .sidebar-item-text.sidebar-link.collapsed,
+.sidebar .sidebar-item-section .sidebar-item-text,
+.sidebar > .sidebar-menu-container > ul > li > .sidebar-item-container > .sidebar-item-text.sidebar-link:not(.collapsed),
+.sidebar .sidebar-menu-container > ul > li:not(.sidebar-item-section) > .sidebar-item-container > .sidebar-item-text {
+  font-family: neue-haas-grotesk-display, sans-serif !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  text-transform: uppercase !important;
+  word-spacing: 0.2em !important;
+}
+
+// Sidebar link hover — black bg, white text
+.sidebar .sidebar-item-text.sidebar-link,
+a.sidebar-item-text.sidebar-link {
+  transition: all 0.2s ease;
+  border-radius: 0;
+  padding: 0.25rem 0.8rem;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar .sidebar-item-text.sidebar-link:hover,
+a.sidebar-item-text.sidebar-link:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+// ===== MOBILE =====
+
+@media (max-width: 991.98px) {
+  .quarto-secondary-nav {
+    background: white;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1040;
+  }
+
+  .quarto-secondary-nav .container-fluid {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .quarto-btn-toggle {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.375rem;
+    color: #495057;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &:hover {
+      background: #e9ecef;
+    }
+  }
+
+  .sidebar.sidebar-navigation.floating {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100vh;
+    background: white;
+    z-index: 1050;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+
+    &.show {
+      transform: translateX(0) !important;
+    }
+  }
+
+  .sidebar-menu-container {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
 }

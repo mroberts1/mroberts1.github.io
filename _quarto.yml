@@ -1,5 +1,8 @@
 project:
   type: website
+  resources:
+  - "pdf/*.pdf"
+  - "fonts/**"
 website:
   title: "Martin Roberts"
   page-footer:
@@ -69,7 +72,6 @@ format:
   html:
     bread-crumbs: false
     theme: squarespace.scss
-    css: styles.css
     toc: false
     resources:
       - "fonts/**"
