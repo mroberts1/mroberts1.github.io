@@ -33,7 +33,6 @@ $line-height-base: 1.6 !default;
 // Color variables
 $body-color: #333333 !default;
 $link-color: #000000 !default;
-$link-hover-color: #cc0000 !default;
 $link-active-color: #cccccc !default;
 $link-visited-color: #000000 !default;
 $sidebar-bg: #ffffff !default;
@@ -55,6 +54,11 @@ $grid-margin-width: 100px !default;
 $grid-gutter-width: 1em !default;
 
 /*-- scss:rules --*/
+
+// Hide title block — titles are set for browser tab/SEO but not rendered visually
+.quarto-title-block {
+  display: none;
+}
 
 :root {
   --bs-body-font-weight: 300;
