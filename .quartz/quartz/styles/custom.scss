@@ -421,3 +421,78 @@ body[data-slug="projects/sirat"] {
 body[data-slug$="/index"] .article-title {
   text-transform: capitalize;
 }
+
+// Hand-authored card grid, used on the Blogs page for outbound links.
+// Deliberately separate from `.page-listing` above: that one styles Quartz's
+// generated folder and tag listings, whose markup this does not share. The two
+// are kept visually consistent by hand.
+.link-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+
+  @media all and #{$mobile} {
+    grid-template-columns: 1fr;
+  }
+}
+
+a.link-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  background-color: var(--light);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--dark);
+  transition: all 0.2s;
+
+  &:hover {
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #0000001a;
+  }
+
+  // The page-wide rule underlines every link inside <article>. A card is a
+  // block, not a run of text, so the underline would sit under the whole thing.
+  text-decoration: none;
+
+  // Quartz appends an arrow to external links. Inside a card it lands after the
+  // description as a stray glyph; the card is obviously a link already.
+  .external-icon {
+    display: none;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    // The sources are full-page screenshots at assorted sizes. A fixed ratio
+    // with a top-anchored crop gives the grid one rhythm and keeps each site's
+    // masthead, which is the recognisable part.
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top center;
+    margin: 0;
+    border-radius: 0;
+  }
+}
+
+.link-card-title {
+  padding: 0.9rem 1rem 0;
+  font-weight: 700;
+}
+
+.link-card-desc {
+  padding: 0.2rem 1rem 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+// Quartz's separator between the article and the page footer. On Blogs the
+// cards already close the page off, so the rule reads as a stray line. It is a
+// direct child of .center, so this leaves any <hr> written in the markdown
+// alone. Scoped to this page; every other page keeps the separator.
+body[data-slug="blogs"] .center > hr {
+  display: none;
+}

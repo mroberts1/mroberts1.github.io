@@ -8,9 +8,9 @@ title: "Sirāt: Deserts Are Not Empty"
 
 > [!custom] Rethinking Transnational Cinema(s)
 > Paper proposal\
-> Global Cinema Symposium, Transnational Cinemas SIG\
-> University of Texas, Dallas\
-> 14-16 November 2026\
+> Transnational Cinemas SIG\
+> Society for Cinema & Media Studies Conference\
+> Montréal, Québec, 17-20 March 2027\
 > [**Martin Roberts**](mailto:martin_roberts@emerson.edu)\
 > [Emerson College](https://www.emerson.edu)
 
