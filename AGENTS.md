@@ -80,11 +80,11 @@ the registry (v0.0.1, a transmission-daemon client).
 
 Both scripts work from any directory.
 
-`.quartz/.node-version` pins `v22.16.0`, which nodenv here does not have
-installed. `./dev.sh` then dies with `nodenv: version 'v22.16.0' is not
-installed` before reaching Quartz. Work around it per-run with
-`NODENV_VERSION=22.23.2 ./dev.sh`. That file belongs to the vendored Quartz
-tree, so prefer the env var over editing it. Quartz only requires node >= 22.
+`.quartz/.node-version` pins `22.23.2`, the same value as every sibling vault,
+so all five sites build on one Node. If nodenv here lacks it, `./dev.sh` dies
+with `nodenv: version '22.23.2' is not installed` before reaching Quartz; either
+`nodenv install 22.23.2` or override per-run with `NODENV_VERSION=<installed>
+./dev.sh`. Quartz itself only requires node >= 22.
 
 Quartz does not fail when its requested port is busy; it increments and prints
 the port it actually took. Read the "Started a Quartz server listening at" line
@@ -142,11 +142,22 @@ config survives an upgrade. Everything the YAML cannot express lives in
 scale, wrapped code blocks, a card grid for folder listings, the `[!custom]`
 callout, underlined body links, and the print stylesheet.
 
-Departure Mono is the header, body and code face. It is not on Google Fonts, so
-every build logs a failed fetch for it. That is expected and harmless; the
-`@font-face` in `custom.scss` is what actually loads it, from
-`.quartz/quartz/static/fonts/`. The paths there are relative, not
-root-absolute, and must stay that way.
+Helvetica Neue is the header, body and code face, set in `quartz.config.yaml`
+with `fontOrigin: local` because it is a system face rather than a Google font.
+The fallback stack for machines without it lives in `custom.scss`, which is
+unlayered and so outranks the bare family the quartz-fonts plugin emits. That
+plugin also hard-sets `h1..h6` unlayered, from a stylesheet loaded after
+`custom.scss`, so the heading override there is prefixed with `body` to win on
+specificity rather than source order.
+
+`og-image` is disabled as a consequence: it fetches the `theme.typography`
+families from Google Fonts to draw social cards and aborts the build with "No
+fonts are loaded" when it cannot find them. Re-enabling it means going back to a
+Google-served family.
+
+The Departure Mono `@font-face` and its font files are kept but unreferenced, so
+switching back is a config change alone. Its paths are relative, not
+root-absolute, and must stay that way if it is ever re-enabled.
 
 Font Awesome is self-hosted the same way, with only the two subsets used.
 Codepoints are read from a real Font Awesome `all.css`, not guessed. Currently

@@ -10,7 +10,7 @@ It is an Obsidian vault published as a static site with
 The site was a [Quarto](https://quarto.org/) project until September 2026. It now
 shares its design and toolchain with the four teaching vaults
 (`digital-culture-fa26`, `marlboro-digital-culture`, `lang-media-arts`,
-`fsu-interactive-media-fa26`): Departure Mono throughout, a folder-driven
+`fsu-interactive-media-fa26`): Helvetica Neue throughout, a folder-driven
 sidebar, and the same light and dark palettes.
 
 ## Getting started
