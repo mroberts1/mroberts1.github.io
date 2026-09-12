@@ -6,9 +6,8 @@ title: "Sirāt: Deserts Are Not Empty"
 
 <img src="img/sirat.webp" width="100%">
 
-> [!custom] Rethinking Transnational Cinema(s)
+> [!custom] Transnational Cinemas SIG
 > Paper proposal\
-> Transnational Cinemas SIG\
 > Society for Cinema & Media Studies Conference\
 > Montréal, Québec, 17-20 March 2027\
 > [**Martin Roberts**](mailto:martin_roberts@emerson.edu)\

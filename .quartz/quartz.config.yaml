@@ -12,21 +12,22 @@ configuration:
     - templates
     - .obsidian
   theme:
-    fontOrigin: googleFonts
+    # `local`, not `googleFonts`: Helvetica Neue is a system face that ships with
+    # macOS and iOS, not something Google serves. Asking Google for it would only
+    # produce a failed fetch on every build, the way Departure Mono used to.
+    fontOrigin: local
     cdnCaching: true
     # These are not the fonts the site renders: the quartz-fonts plugin below
     # sets those, and its @layer wins. They are kept in sync anyway so there is
     # only one answer to "what font is this site".
     #
-    # They used to have to be Google-served families because the og-image
-    # emitter fetched them to draw social cards and crashed on a missing body
-    # font. That emitter is now disabled, so the constraint is gone. Re-enable
-    # @quartz-community/og-image and these must go back to families Google
-    # actually serves; Departure Mono is not one.
+    # Re-enabling @quartz-community/og-image would require families Google
+    # actually serves, since that emitter fetches them to draw social cards.
+    # Helvetica Neue is not one.
     typography:
-      header: Departure Mono
-      body: Departure Mono
-      code: Departure Mono
+      header: Helvetica Neue
+      body: Helvetica Neue
+      code: Helvetica Neue
     colors:
       lightMode:
         light: "#e2e2e2"
@@ -112,17 +113,16 @@ plugins:
   # theme enabled there is no font registry to read, so the plugin falls back to
   # Quartz's defaults (Schibsted Grotesk / Source Sans Pro) and emits them in
   # @layer quartz-fonts, which comes after quartz-base and so outranks the
-  # values from theme.typography.
-  # Departure Mono is not on Google Fonts; it is skipped there and resolved by
-  # the self-hosted @font-face in quartz/styles/custom.scss. These are the
-  # values the browser actually uses; see the note on theme.typography above.
+  # values from theme.typography. These are the values the browser actually
+  # uses. The fallback stack for machines without Helvetica Neue is set in
+  # quartz/styles/custom.scss, which is unlayered and so outranks this.
   - source: "@quartz-community/quartz-fonts"
     enabled: true
     options:
-      fontOrigin: googleFonts
-      header: Departure Mono
-      body: Departure Mono
-      code: Departure Mono
+      fontOrigin: local
+      header: Helvetica Neue
+      body: Helvetica Neue
+      code: Helvetica Neue
   - source: "@quartz-themes/core"
     enabled: false
     options:

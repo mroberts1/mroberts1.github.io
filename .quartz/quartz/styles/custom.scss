@@ -8,14 +8,17 @@
 // can't express.
 // ---------------------------------------------------------------------------
 
-// Departure Mono is not on Google Fonts, so it is self-hosted here. Google
-// still returns 200 for the combined request and simply skips the unknown
-// family; this @font-face is what actually resolves the site fonts.
-// Paths are relative, not root-absolute. The stylesheet is emitted at the site
-// root, so "static/fonts/..." resolves under any baseUrl. A leading slash would
-// 404 on GitHub Pages project sites, which are served from /<repo>/ — and the
-// breakage is invisible on any machine that has Departure Mono installed
-// locally, because the system font satisfies the family name.
+// Currently unused: the site is set to Helvetica Neue in quartz.config.yaml.
+// Kept, with the font files, so switching back to Departure Mono is a config
+// change alone. An unreferenced @font-face costs nothing, since browsers only
+// fetch a face when something asks for it.
+//
+// Departure Mono is not on Google Fonts, so it has to be self-hosted. Paths are
+// relative, not root-absolute: the stylesheet is emitted at the site root, so
+// "static/fonts/..." resolves under any baseUrl, while a leading slash would
+// 404 on a GitHub Pages project site served from /<repo>/ — and the breakage
+// would be invisible on any machine with Departure Mono installed locally,
+// because the system font satisfies the family name.
 @font-face {
   font-family: "Departure Mono";
   src:
@@ -28,6 +31,14 @@
 :root {
   --customCallout: #b7ffec59;
   --searchBackground: #d3d3d3;
+
+  // Helvetica Neue ships with macOS and iOS but not with Windows or most Linux
+  // installs, so it needs a real fallback stack. The quartz-fonts plugin emits
+  // a bare family name into @layer quartz-fonts; this file is unlayered, and
+  // unlayered rules beat every layer, so these are what the browser uses.
+  --headerFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --bodyFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --codeFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root[saved-theme="dark"] {
@@ -37,6 +48,23 @@
 
 body {
   font-size: 0.86rem;
+}
+
+// The quartz-fonts plugin emits its own `h1, h2, ... { font-family: <family> }`
+// with the bare family name and no fallback, which beats --headerFont. Point
+// headings back at the variable so they inherit the fallback stack too;
+// otherwise a machine without Helvetica Neue gets the browser default here
+// while the rest of the page correctly falls back to Helvetica or Arial.
+// `body` prefix is load-bearing. The plugin's rule is unlayered and its
+// stylesheet loads after this one, so an equal-specificity selector loses on
+// source order; 0,0,2 beats its 0,0,1 regardless of order.
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: var(--headerFont);
 }
 
 // Plastic Labs runs a tighter heading scale than Quartz ships with.
