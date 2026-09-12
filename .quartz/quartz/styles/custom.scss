@@ -388,3 +388,36 @@ body[data-slug="projects/sirat"] {
     display: none;
   }
 }
+
+// Explorer sidebar. Folder labels come from the directory name on disk, which
+// is lowercase because those names are also URL segments (/projects/sirat).
+// Capitalising here leaves the paths alone. Scoped to .folder-title so it
+// cannot touch page titles, where it would also uppercase words like "and".
+.explorer {
+  .folder-title {
+    text-transform: capitalize;
+  }
+
+  // Separate the folder sections from each other and from the loose pages
+  // below them. margin-bottom rather than margin-top so the last folder is
+  // also separated from the first file under it.
+  .explorer-ul > li:has(> .folder-container) {
+    margin-bottom: 0.75rem;
+  }
+}
+
+// The same folder names surface in two more places. Both are capitalised here
+// so the sidebar does not read "Projects" next to a breadcrumb reading
+// "projects".
+//
+// Breadcrumbs: every segment but the last, which is the page title and is
+// already cased by its author. Capitalising that one would also uppercase
+// words like "and" inside a title.
+.breadcrumb-container .breadcrumb-element:not(:last-child) a {
+  text-transform: capitalize;
+}
+
+// The generated folder listing page, whose <h1> is the raw directory name.
+body[data-slug$="/index"] .article-title {
+  text-transform: capitalize;
+}
