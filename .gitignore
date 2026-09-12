@@ -1,5 +1,24 @@
-/.quarto/
-/_site/
-.Rproj.user
+.DS_Store
+public/
+.chum-cache/
 
-**/*.quarto_ipynb
+# .obsidian/ is tracked here, unlike the sibling vaults: it carries the editor
+# theme, fonts and snippets, and the plugins holding credentials were left out.
+# See AGENTS.md. Workspace state is per-machine, so it stays out.
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Smart Connections plugin embeddings cache.
+.smart-env/
+
+.quartz/node_modules/
+.quartz/.quartz-cache/
+.quartz/.quartz/
+.quartz/plugins/
+
+# Editor state. Local settings and appearance, not site content; the same
+# reasoning that keeps .obsidian/ out.
+.antigravity/
+.cursor/
+.vscode/
+.windsurf/

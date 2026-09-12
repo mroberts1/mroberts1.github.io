@@ -1,0 +1,9 @@
+{
+  "bolt-theme@@theme-class-select": "theme-classic",
+  "bolt-theme@@restore-ribbon": false,
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-light": true,
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-dark": true,
+  "anuppuccin-theme-settings-extended@@catppuccin-theme-extended": "ctp-notion-light",
+  "anuppuccin-theme-settings-extended@@catppuccin-theme-dark-extended": "ctp-rosepine-dark",
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-amoled": false
+}

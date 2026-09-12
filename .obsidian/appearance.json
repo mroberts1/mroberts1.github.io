@@ -1,0 +1,19 @@
+{
+  "baseFontSize": 16,
+  "theme": "obsidian",
+  "cssTheme": "Plastic Labs",
+  "translucency": false,
+  "accentColor": "",
+  "showViewHeader": false,
+  "enabledCssSnippets": [
+    "minimal",
+    "videoContainer",
+    "banner-image"
+  ],
+  "interfaceFontFamily": "Departure Mono",
+  "textFontFamily": "Departure Mono",
+  "nativeMenus": false,
+  "monospaceFontFamily": "Departure Mono",
+  "baseFontSizeAction": true,
+  "showRibbon": true
+}

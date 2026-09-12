@@ -1,0 +1,11 @@
+---
+title: Endless Summer
+---
+
+<video autoplay loop muted playsinline width="75%">
+<source src="video/taxiway.mp4" type="video/mp4">
+</video>
+
+[Endless Summer: Transcultural Geographies of City Pop Art](https://mroberts1.github.io/endless-summer/)\
+"And Suddenly There Was City Pop: The Global Dimensions of the Retrograde Formation of a Japanese Popular Music Genre"\
+University of Amsterdam, 19-21 March 2025.

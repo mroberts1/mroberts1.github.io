@@ -1,0 +1,11 @@
+---
+title: Entangled Lives
+---
+
+<video autoplay loop muted playsinline width="75%">
+<source src="video/sd-cover.mp4" type="video/mp4">
+</video>
+
+[Entangled Lives: Uncanny Animals in Cosmopolitical Documentary](https://dokoissho.sdf.org/conferences/entangled-lives/)\
+"New Configurations of Globality in Documentary Media" panel\
+Society for Cinema & Media Studies Conference, Boston, 16 March 2024.

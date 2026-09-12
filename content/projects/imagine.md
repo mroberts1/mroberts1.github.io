@@ -1,0 +1,9 @@
+---
+title: Imagine
+---
+
+[<img src="img/imagine.jpg" width="75%">](https://9dream.netlify.app/imagine/)
+
+['Imagine': Performance and Ritual in an Age of Global Insecurity](https://9dream.netlify.app/imagine/)\
+Cultural Typhoon conference.\
+Tokyo University of the Arts, Japan, July 2016.

@@ -1,0 +1,327 @@
+# yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
+configuration:
+  pageTitle: Martin Roberts
+  pageTitleSuffix: ""
+  enableSPA: true
+  enablePopovers: true
+  analytics: null
+  locale: en-US
+  baseUrl: mroberts1.github.io
+  ignorePatterns:
+    - private
+    - templates
+    - .obsidian
+  theme:
+    fontOrigin: googleFonts
+    cdnCaching: true
+    # These are not the fonts the site renders: the quartz-fonts plugin below
+    # sets those, and its @layer wins. They are kept in sync anyway so there is
+    # only one answer to "what font is this site".
+    #
+    # They used to have to be Google-served families because the og-image
+    # emitter fetched them to draw social cards and crashed on a missing body
+    # font. That emitter is now disabled, so the constraint is gone. Re-enable
+    # @quartz-community/og-image and these must go back to families Google
+    # actually serves; Departure Mono is not one.
+    typography:
+      header: Departure Mono
+      body: Departure Mono
+      code: Departure Mono
+    colors:
+      lightMode:
+        light: "#e2e2e2"
+        lightgray: "#4e4e4e"
+        gray: "#4e4e4e"
+        darkgray: "#4e4e4e"
+        dark: "#4e4e4e"
+        secondary: "#4e4e4e"
+        tertiary: "#c0ffe1"
+        highlight: rgba(128, 128, 128, 0.35)
+        textHighlight: "#fff23688"
+      darkMode:
+        light: "#191919"
+        lightgray: "#393639"
+        gray: "#e2e2e2"
+        darkgray: "#e2e2e2"
+        dark: "#ebebec"
+        secondary: "#7c7c7c"
+        tertiary: "#c0ffe1"
+        highlight: rgba(125, 125, 125, 0.15)
+        textHighlight: "#b3aa0288"
+plugins:
+  - source: "@quartz-community/created-modified-date"
+    enabled: true
+    options:
+      defaultDateType: modified
+      priority:
+        - frontmatter
+        - git
+        - filesystem
+    order: 10
+  - source: "@quartz-community/syntax-highlighting"
+    enabled: true
+    options:
+      theme:
+        light: github-light
+        dark: github-dark
+      keepBackground: false
+    order: 20
+  - source: "@quartz-community/obsidian-flavored-markdown"
+    enabled: true
+    options:
+      enableInHtmlEmbed: false
+      enableCheckbox: true
+    order: 30
+  - source: "@quartz-community/github-flavored-markdown"
+    enabled: true
+    order: 40
+  - source: "@quartz-community/table-of-contents"
+    enabled: true
+    order: 50
+    layout:
+      position: right
+      priority: 30
+  - source: "@quartz-community/crawl-links"
+    enabled: true
+    options:
+      markdownLinkResolution: shortest
+    order: 60
+  - source: "@quartz-community/description"
+    enabled: true
+    order: 70
+  - source: "@quartz-community/latex"
+    enabled: true
+    options:
+      renderEngine: katex
+    order: 80
+  # No bibliography on this site. Left enabled it aborts every build with
+  # "Cannot read non valid bibliography URL in node env".
+  - source: "@quartz-community/citations"
+    enabled: false
+    order: 85
+  - source: "@quartz-community/hard-line-breaks"
+    enabled: false
+    order: 90
+  - source: "@quartz-community/ox-hugo"
+    enabled: false
+    order: 91
+  - source: "@quartz-community/roam"
+    enabled: false
+    order: 92
+  # These must be repeated here, not just under theme.typography above. With no
+  # theme enabled there is no font registry to read, so the plugin falls back to
+  # Quartz's defaults (Schibsted Grotesk / Source Sans Pro) and emits them in
+  # @layer quartz-fonts, which comes after quartz-base and so outranks the
+  # values from theme.typography.
+  # Departure Mono is not on Google Fonts; it is skipped there and resolved by
+  # the self-hosted @font-face in quartz/styles/custom.scss. These are the
+  # values the browser actually uses; see the note on theme.typography above.
+  - source: "@quartz-community/quartz-fonts"
+    enabled: true
+    options:
+      fontOrigin: googleFonts
+      header: Departure Mono
+      body: Departure Mono
+      code: Departure Mono
+  - source: "@quartz-themes/core"
+    enabled: false
+    options:
+      theme: tokyo-night
+      mode: both
+  - source: "@quartz-community/remove-draft"
+    enabled: true
+  - source: "@quartz-community/explicit-publish"
+    enabled: false
+  - source: "@quartz-community/alias-redirects"
+    enabled: true
+  - source: "@quartz-community/content-index"
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
+  - source: "@quartz-community/favicon"
+    enabled: true
+  # Off: it fetches theme.typography families from Google Fonts to draw social
+  # cards, and Departure Mono is not on Google Fonts, so the build fails with
+  # "Failed to emit from plugin CustomOgImages". Social cards are not wanted
+  # here, so the emitter goes rather than the font.
+  - source: "@quartz-community/og-image"
+    enabled: false
+  # Off: with no custom domain, this emits a CNAME of `mroberts1.github.io`,
+  # which GitHub Pages would take as the custom domain for a project site.
+  - source: "@quartz-community/cname"
+    enabled: false
+  - source: "@quartz-community/canvas-page"
+    enabled: true
+  - source: "@quartz-community/content-page"
+    enabled: true
+  - source: "@quartz-community/folder-page"
+    enabled: true
+  - source: "@quartz-community/tag-page"
+    enabled: true
+  - source: "@quartz-community/explorer"
+    enabled: true
+    options:
+      title: Pages
+    layout:
+      position: left
+      priority: 50
+  - source: "@quartz-community/graph"
+    enabled: false
+    layout:
+      position: right
+      priority: 10
+  - source: "@quartz-community/search"
+    enabled: true
+    layout:
+      position: left
+      priority: 20
+      group: toolbar
+      groupOptions:
+        grow: true
+  # Off: the weekly pages each link back to index.md, which gave the syllabus a
+  # long backlinks list in the right margin. The links are wanted; the section
+  # is not.
+  - source: "@quartz-community/backlinks"
+    enabled: false
+    layout:
+      position: right
+      priority: 50
+  - source: "@quartz-community/article-title"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 10
+  - source: "@quartz-community/content-meta"
+    enabled: true
+    options:
+      showReadingTime: false
+    layout:
+      position: beforeBody
+      priority: 20
+  - source: "@quartz-community/tag-list"
+    enabled: false
+    layout:
+      position: beforeBody
+      priority: 30
+  - source: "@quartz-community/page-title"
+    enabled: false
+    layout:
+      position: left
+      priority: 10
+  - source: "@quartz-community/darkmode"
+    enabled: true
+    layout:
+      position: left
+      priority: 30
+      group: toolbar
+  - source: "@quartz-community/reader-mode"
+    enabled: true
+    layout:
+      position: left
+      priority: 35
+      group: toolbar
+  - source: "@quartz-community/breadcrumbs"
+    enabled: true
+    layout:
+      position: beforeBody
+      priority: 5
+      condition: not-index
+  - source: "@quartz-community/comments"
+    enabled: false
+    options:
+      provider: giscus
+      options: {}
+    layout:
+      position: afterBody
+      priority: 10
+  - source: "@quartz-community/footer"
+    enabled: true
+    options:
+      links:
+        Email: mailto:mroberts1@gmail.com
+        Mastodon: https://merveilles.town/@dokoissho
+        GitHub: https://github.com/mroberts1/
+        Twitter: https://twitter.com/mroberts_vma
+  - source: "@quartz-community/recent-notes"
+    enabled: false
+  - source: "@quartz-community/spacer"
+    enabled: true
+    options: {}
+    order: 25
+    layout:
+      position: left
+      priority: 25
+      display: mobile-only
+  - source: "@quartz-community/bases-page"
+    enabled: true
+    options: {}
+    order: 50
+  - source: "@quartz-community/note-properties"
+    enabled: true
+    options:
+      includeAll: false
+      includedProperties:
+        - description
+        - tags
+        - aliases
+      excludedProperties: []
+      hidePropertiesView: false
+      delimiters: ---
+      language: yaml
+    order: 5
+    layout:
+      position: beforeBody
+      priority: 15
+      display: all
+  - source: "@quartz-community/unlisted-pages"
+    enabled: true
+    options: {}
+    order: 45
+  - source: "@quartz-community/encrypted-pages"
+    enabled: true
+    options:
+      iterations: 600000
+      passwordField: password
+      unlistWhenEncrypted: false
+      outputPath: static/encryptedContentIndex.json
+    order: 900
+    layout:
+      position: body
+      priority: 100
+      display: all
+  - source: "@quartz-community/stacked-pages"
+    enabled: false
+    layout:
+      position: afterBody
+      priority: 50
+      display: all
+  - source: github:vazome/quartz-image-zoom
+    enabled: true
+    options: {}
+    order: 50
+layout:
+  groups:
+    toolbar:
+      priority: 35
+      direction: row
+      gap: 0.5rem
+  byPageType:
+    "404":
+      positions:
+        beforeBody: []
+        left: []
+        right: []
+    content: {}
+    folder:
+      exclude:
+        - reader-mode
+      positions:
+        right: []
+    tag:
+      exclude:
+        - reader-mode
+      positions:
+        right: []
+    canvas: {}
+    bases: {}

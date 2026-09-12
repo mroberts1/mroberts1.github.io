@@ -1,0 +1,390 @@
+@use "./variables.scss" as *;
+
+// ---------------------------------------------------------------------------
+// Plastic Labs theme
+// Palette, type scale and callout extras reproduced from
+// https://plasticlabs.ai/blog/ (itself a Quartz site).
+// Colours live in quartz.config.yaml; this file holds what the config
+// can't express.
+// ---------------------------------------------------------------------------
+
+// Departure Mono is not on Google Fonts, so it is self-hosted here. Google
+// still returns 200 for the combined request and simply skips the unknown
+// family; this @font-face is what actually resolves the site fonts.
+// Paths are relative, not root-absolute. The stylesheet is emitted at the site
+// root, so "static/fonts/..." resolves under any baseUrl. A leading slash would
+// 404 on GitHub Pages project sites, which are served from /<repo>/ — and the
+// breakage is invisible on any machine that has Departure Mono installed
+// locally, because the system font satisfies the family name.
+@font-face {
+  font-family: "Departure Mono";
+  src:
+    url("static/fonts/DepartureMono-Regular.woff2") format("woff2"),
+    url("static/fonts/DepartureMono-Regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --customCallout: #b7ffec59;
+  --searchBackground: #d3d3d3;
+}
+
+:root[saved-theme="dark"] {
+  --customCallout: #00b8d410;
+  --searchBackground: #252525;
+}
+
+body {
+  font-size: 0.86rem;
+}
+
+// Plastic Labs runs a tighter heading scale than Quartz ships with.
+h1 {
+  font-size: 1.58rem;
+}
+h2 {
+  font-size: 1.26rem;
+}
+h3 {
+  font-size: 1.01rem;
+}
+h4,
+h5,
+h6 {
+  font-size: 0.9rem;
+}
+
+input[type="search"] {
+  background-color: var(--searchBackground);
+}
+
+// Long lines wrap rather than scroll horizontally.
+pre {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  padding: 1rem !important;
+
+  & > code {
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    display: block !important;
+    padding-left: 1rem !important;
+  }
+}
+
+// An extra callout type beyond Obsidian's set: > [!custom]
+.callout[data-callout="custom"] {
+  --color: var(--darkgray);
+  --border: var(--tertiary);
+  --bg: var(--customCallout);
+  --callout-icon: var(--callout-icon-tip);
+}
+
+// Folder/tag listings render as a card grid instead of a plain list.
+.page-listing {
+  ul.section-ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+
+    @media all and #{$mobile} {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  li.section-li {
+    position: relative;
+    border: 1px solid var(--lightgray);
+    border-radius: 8px;
+    background-color: var(--light);
+    padding: 1.5rem;
+    transition: all 0.2s;
+
+    &:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px #0000001a;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      height: 100%;
+    }
+
+    .meta {
+      margin: 0;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    .desc {
+      flex: 1;
+
+      h3 {
+        margin: 0;
+        font-size: 1.1rem;
+
+        a {
+          color: var(--dark);
+          text-decoration: none;
+
+          &:hover {
+            color: var(--secondary);
+          }
+
+          // Makes the whole card clickable.
+          &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+          }
+        }
+      }
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        margin: 0;
+      }
+
+      a {
+        border-radius: 4px;
+        background-color: var(--highlight);
+        padding: 0.25rem 0.5rem;
+        font-size: 0.75rem;
+        text-decoration: none;
+
+        &:hover {
+          background-color: var(--secondary);
+          color: var(--light);
+        }
+      }
+    }
+  }
+}
+
+// Font Awesome, self-hosted. Only the two subsets actually used, rather than
+// the whole kit: a CSS @import breaks the SCSS build (@use must come first)
+// and there is no config hook for adding a <link> to <head>, so the icons are
+// declared here the same way Departure Mono is. Codepoints are read from the
+// kit's own all.min.css, not guessed.
+//
+@font-face {
+  font-family: "Font Awesome 7 Brands";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("static/fonts/fa-brands-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Font Awesome 7 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("static/fonts/fa-solid-900.woff2") format("woff2");
+}
+
+.fa-brands,
+.fa-solid {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  vertical-align: -0.125em;
+}
+
+.fa-brands {
+  font-family: "Font Awesome 7 Brands";
+  font-weight: 400;
+}
+
+.fa-solid {
+  font-family: "Font Awesome 7 Free";
+  font-weight: 900;
+}
+
+.fa-brands::before,
+.fa-solid::before {
+  content: var(--fa);
+}
+
+.fa-envelope {
+  --fa: "\f0e0";
+}
+
+.fa-mastodon {
+  --fa: "\f4f6";
+}
+
+.fa-github {
+  --fa: "\f09b";
+}
+
+.fa-twitter {
+  --fa: "\f099";
+}
+
+.fa-facebook {
+  --fa: "\f09a";
+}
+
+// Links in the body are otherwise marked only by colour, which barely
+// separates them from the text in a single-weight monospace face. Underline
+// them on screen. Sidebar, nav and footer links are left alone: their position
+// already says they are links, and underlining the whole explorer is noise.
+// The print block below strips these again, so the PDF is unaffected.
+article a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 1px;
+}
+
+// Two exceptions inside the article: the Font Awesome contact icons in the
+// course-details callout, and the anchor Quartz appends to each heading. An
+// underline under a glyph or a section title reads as a mistake.
+article a:has(.fa-brands),
+article a:has(.fa-solid),
+article h1 > a,
+article h2 > a,
+article h3 > a,
+article h4 > a,
+article h5 > a,
+article h6 > a {
+  text-decoration: none;
+}
+
+// Print. Syllabi get handed out as PDFs, printed from the built page so they
+// keep the site's fonts, callouts and colours. Generate with ./script/pdf.
+@media print {
+  @page {
+    size: letter;
+    margin: 18mm 16mm;
+  }
+
+  // Force the light palette: printing from dark mode would otherwise put a
+  // near-black ground behind everything.
+  :root {
+    --light: #fff;
+    --dark: #222;
+    --darkgray: #222;
+    --gray: #555;
+    --secondary: #222;
+  }
+
+  body {
+    background: #fff;
+    color: #222;
+  }
+
+  // `footer` is the Quartz credit block, which otherwise prints as a nearly
+  // empty last page. `.external-icon` is the little arrow after every link.
+  .left.sidebar,
+  .right.sidebar,
+  .explorer-toggle,
+  .mobile-explorer,
+  .search,
+  .darkmode,
+  .readermode,
+  .page-footer,
+  footer,
+  .external-icon {
+    display: none !important;
+  }
+
+  // Quartz's separator before the footer. It is a direct child of .center, so
+  // this does not touch the rules written in the markdown, which live inside
+  // <article>. Left in, it prints as a stray line on a page of its own.
+  .center > hr {
+    display: none !important;
+  }
+
+  .page,
+  .page .center {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  // Any leftover height after the last line pushes out a blank final page. A
+  // trailing decorative rule earns nothing in print.
+  html,
+  body,
+  .page,
+  .page .center,
+  article {
+    min-height: 0 !important;
+    height: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  article *:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  article hr:last-child {
+    display: none !important;
+  }
+
+  // Keep headings with the text they introduce, and never split a callout.
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+
+  blockquote,
+  .callout,
+  li {
+    break-inside: avoid;
+  }
+
+  // Underlined blue links read as noise on paper, and internal links carry a
+  // highlight box that prints as a grey slab.
+  a,
+  a.internal {
+    color: #222;
+    background: none !important;
+    text-decoration: none;
+  }
+}
+
+// Quartz escapes markup in the frontmatter `title`, so a film title in a page
+// title cannot be italicised there — the asterisks (or an <em>) render
+// literally. This page therefore writes its own <h1> in the body, where
+// markdown applies, and the generated one is hidden. `title` stays plain so the
+// explorer, search, breadcrumbs and og:title keep a clean string. Undo both
+// halves together: unhiding this without removing the body <h1> shows two
+// titles.
+body[data-slug="projects/sirat"] {
+  .article-title {
+    display: none;
+  }
+
+  // The body <h1> is the page title, so the table of contents lists it as its
+  // own first entry, linking to the top of the page. Drop that one row.
+  .toc-content > li.depth-0:first-child {
+    display: none;
+  }
+
+  // No anchor icon on a title.
+  article > h1:first-child > a[role="anchor"] {
+    display: none;
+  }
+}

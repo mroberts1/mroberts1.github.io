@@ -1,0 +1,335 @@
+/* Plastic Labs — academic-cyberpunk research repository theme */
+/* Monospaced, information-dense, neutral greys with mint accent */
+
+/* ===== CSS Variables ===== */
+:root,
+.theme-light {
+  --color-primary: #4e4e4e;
+  --color-secondary: #4e4e4e;
+  --color-tertiary: #c0ffe1;
+  --color-bg: #e2e2e2;
+  --color-surface: #e2e2e2;
+  --color-highlight: #80808059;
+  --color-text-highlight: #fff23688;
+  --color-text: #4e4e4e;
+  --color-text-muted: #6e6e6e;
+  --color-border: lightgray;
+  --color-accent: #c0ffe1;
+  --radius-default: 5px;
+  --radius-tag: 8px;
+  --radius-card: 8px;
+  --sidebar-width: 320px;
+  --container-max: 1500px;
+  --gap: 1.2rem;
+  --font-family: "Departure Mono", "Roboto Mono", "Ubuntu Mono", ui-monospace, monospace;
+  --font-code: "Ubuntu Mono", "Roboto Mono", "Departure Mono", ui-monospace, monospace;
+  --font-size-base: 0.86rem;
+  --line-height: 1.44;
+}
+
+.theme-dark {
+  --color-primary: #c0c0c0;
+  --color-secondary: #c0c0c0;
+  --color-tertiary: #c0ffe1;
+  --color-bg: #191919;
+  --color-surface: #252525;
+  --color-highlight: #ffffff14;
+  --color-text-highlight: #fff23688;
+  --color-text: #e0e0e0;
+  --color-text-muted: #a0a0a0;
+  --color-border: #3a3a3a;
+  --color-accent: #c0ffe1;
+}
+
+/* ===== Base ===== */
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+h4 { font-size: 1.05rem; }
+
+/* ===== Body text ===== */
+.markdown-rendered p {
+  margin-bottom: 0.8rem;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+a:hover {
+  color: var(--color-tertiary);
+  border-bottom-color: var(--color-tertiary);
+}
+
+.theme-dark a:hover {
+  color: var(--color-tertiary);
+}
+
+/* ===== Code ===== */
+code,
+.markdown-rendered code {
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  background: var(--color-highlight);
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: var(--font-code);
+  font-size: 0.82rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-default);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ===== Tables ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+}
+
+th, td {
+  border: 1px solid var(--color-border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: var(--color-surface);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ===== Callouts ===== */
+.callout {
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-highlight);
+  padding: 1rem;
+  border-radius: 0 var(--radius-default) var(--radius-default) 0;
+  margin: 1rem 0;
+}
+
+.callout-title {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 0.3rem;
+}
+
+/* ===== Tags ===== */
+.tag {
+  background: var(--color-highlight);
+  color: var(--color-text);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-tag);
+  font-size: 0.78rem;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.tag:hover {
+  background: var(--color-text-highlight);
+  color: var(--color-primary);
+}
+
+/* ===== Blockquotes ===== */
+blockquote {
+  border-left: 2px solid var(--color-border);
+  padding-left: 1rem;
+  margin-left: 0;
+  color: var(--color-text-muted);
+}
+
+/* ===== Lists ===== */
+ul, ol {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.3rem;
+}
+
+/* ===== Buttons ===== */
+button,
+.mod-cta {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-default);
+  background: transparent;
+  color: var(--color-primary);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+button:hover,
+.mod-cta:hover {
+  background: var(--color-highlight);
+  border-color: var(--color-primary);
+}
+
+/* ===== Popover / Tooltip ===== */
+.popover.hover-editor,
+.popover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+}
+
+/* ===== Cards / Containers ===== */
+.card,
+.markdown-embed,
+.file-embed {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* ===== Scrollable containers ===== */
+.markdown-rendered .scroll-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ===== Task lists ===== */
+.task-list-item {
+  list-style: none;
+  margin-left: -1.5rem;
+}
+
+/* ===== Focus states ===== */
+*:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* ===== Graph view ===== */
+.graph-view.color-fill {
+  color: var(--color-primary);
+}
+
+.graph-view.color-line {
+  color: var(--color-border);
+}
+
+.graph-view.color-text {
+  color: var(--color-text);
+}
+
+.graph-view.color-fill-highlight {
+  color: var(--color-tertiary);
+}
+
+.graph-view.color-line-highlight {
+  color: var(--color-tertiary);
+}
+
+/* ===== Sidebar / Left rail ===== */
+.workspace-ribbon {
+  background: var(--color-surface);
+  border-right: 1px solid var(--color-border);
+  width: var(--sidebar-width);
+}
+
+/* ===== Right rail / Side panel ===== */
+.side-dock {
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+}
+
+/* ===== Modal / Search overlay ===== */
+.modal-container {
+  backdrop-filter: blur(8px);
+}
+
+.modal {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Suggestion list ===== */
+.suggestion-item.is-selected {
+  background: var(--color-highlight);
+}
+
+/* ===== Status bar ===== */
+.status-bar {
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.78rem;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
+
+/* ===== Density tweaks ===== */
+.markdown-source-view,
+.markdown-rendered {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+/* ===== Mobile: single column collapse ===== */
+@media (max-width: 768px) {
+  .markdown-source-view,
+  .markdown-rendered {
+    padding: 0.8rem;
+  }
+
+  :root {
+    --sidebar-width: 0px;
+  }
+}

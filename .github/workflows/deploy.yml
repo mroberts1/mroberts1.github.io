@@ -1,0 +1,67 @@
+name: Deploy Quartz site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Quartz reads git history to derive created/modified dates.
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: .quartz/package-lock.json
+
+      - name: Install dependencies
+        working-directory: .quartz
+        run: npm ci
+
+      # Git-sourced plugins land in .quartz/.quartz/plugins/, which is
+      # gitignored, and the build command does not fetch them on its own.
+      # Without this step the site builds fine but silently drops them.
+      - name: Install git plugins
+        working-directory: .quartz
+        run: npm run install-plugins
+
+      # Not `npx quartz`: this repo's package is private, so npm does not link
+      # its bin into node_modules/.bin and npx would fetch an unrelated package
+      # of the same name from the registry.
+      - name: Build site
+        working-directory: .quartz
+        run: node ./quartz/bootstrap-cli.mjs build -d ../content -o ../public
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

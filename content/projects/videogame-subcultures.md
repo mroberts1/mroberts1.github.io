@@ -1,0 +1,14 @@
+---
+title: Videogame Subcultures
+---
+
+<iframe src="https://player.vimeo.com/video/1000991173?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="750" height="456" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Sans Soleil: Video Games"></iframe>
+
+['By Pressing Down This Special Key, It Plays A Little Melody': Videogame Subcultures and Nostalgia for the Future.](https://mroberts1.github.io/jaspm-2012/)
+
+This paper was originally presented at the Japanese Association for the Study of Popular Music (JASPM) meeting, Tokyo, 25 May 2012.
+
+Panelists: Noriko Manabe [NM], Martin Roberts [MR]\
+Host: Yoshitaka Mouri [YM]
+
+Transcribed, edited, and adapted for the web, August 2024.
