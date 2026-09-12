@@ -50,6 +50,9 @@ jobs:
         working-directory: .quartz
         run: node ./quartz/bootstrap-cli.mjs build -d ../content -o ../public
 
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
